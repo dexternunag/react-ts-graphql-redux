@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { HomePage } from './app/containers/Homepage';
 
 const AppContainer = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      Hello World
+      <HomePage />
     </AppContainer>
   );
 }
