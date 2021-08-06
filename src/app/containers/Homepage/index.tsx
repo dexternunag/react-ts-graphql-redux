@@ -25,7 +25,7 @@ export function HomePage(props: IHomePageProps) {
     const { setAnimePage } = actionDispatch(useAppDispatch())
 
     const fetchAnimePage = async () => {
-        const animePage = await animeService.getAnimePage(0).catch(err => console.log(`Error: ${err}`))
+        const animePage = await animeService.getAnimePage(0, 20).catch(err => console.log(`Error: ${err}`))
 
         console.log({animePage})
         if (animePage) setAnimePage(animePage)

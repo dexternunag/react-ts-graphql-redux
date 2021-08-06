@@ -9,6 +9,7 @@ const HotAnimeContainer = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 `
 
@@ -45,7 +46,7 @@ export function HotAnime() {
 
     const isEmptyAnimePage = !animePage || !animePage.media || animePage.media.length === 0
 
-    if (isEmptyAnimePage) return null;
+    if (isEmptyAnimePage) return <span>Loading...</span>;
 
     return (
         <HotAnimeContainer> 
