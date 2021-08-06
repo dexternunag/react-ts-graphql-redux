@@ -1,4 +1,3 @@
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants'
 import React from 'react'
 import { createSelector } from 'reselect'
 import styled from 'styled-components'
@@ -44,9 +43,9 @@ const stateSelector = createSelector(makeSelectAnimePage, (animePage) => ({
 export function HotAnime() {
     const { animePage } = useAppSelector(stateSelector)
 
-    const isEmptyAnimePage = !animePage || !animePage.media || animePage.media.length === SSL_OP_SSLEAY_080_CLIENT_DH_BUG
+    const isEmptyAnimePage = !animePage || !animePage.media || animePage.media.length === 0
 
-    if (!isEmptyAnimePage) return null;
+    if (isEmptyAnimePage) return null;
 
     return (
         <HotAnimeContainer> 
